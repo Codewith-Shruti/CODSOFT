@@ -1,0 +1,115 @@
+/* Basic Setup */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Main Calculator App Container */
+.calculator-app {
+    width: 320px;
+    background-color: #1c1c1c; /* Dark background */
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Display Area */
+.display {
+    padding: 20px;
+    text-align: right;
+    color: white;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.expression {
+    font-size: 1.2rem;
+    color: #a0a0a0; /* Lighter gray for expression */
+    min-height: 1.5rem;
+    word-break: break-all;
+}
+
+.result {
+    font-size: 2.8rem;
+    font-weight: 300;
+    min-height: 3rem;
+    word-break: break-all;
+}
+
+/* Keypad Grid */
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 20px;
+}
+
+/* Button Styling */
+.btn {
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 50%; /* Fully round buttons */
+    background-color: #3b3b3b; /* Dark gray for numbers */
+    color: white;
+    cursor: pointer;
+    height: 64px;
+    width: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.1s ease;
+}
+
+/* Button Hover/Active States */
+.btn:hover {
+    background-color: #555;
+}
+
+.btn:active {
+    background-color: #777;
+}
+
+/* Button Variants */
+.btn-action {
+    background-color: #a6a6a6; /* Light gray for actions */
+    color: #1c1c1c;
+    font-size: 1.3rem; /* Fixed font size for AC, DEL, % */
+    font-weight: 500;
+}
+.btn-action:hover { background-color: #c0c0c0; }
+.btn-action:active { background-color: #dcdcdc; }
+
+.btn-operator {
+    background-color: #ff9500; /* Orange for operators */
+    color: white;
+    font-size: 2rem; 
+}
+.btn-operator:hover { background-color: #ffab3b; }
+.btn-operator:active { background-color: #ffc27a; }
+
+.btn-equals {
+    background-color: #ff9500;
+    color: white;
+    font-size: 2rem;
+}
+.btn-equals:hover { background-color: #ffab3b; }
+.btn-equals:active { background-color: #ffc27a; }
+
+
+/* Special '0' button */
+.btn-zero {
+    grid-column: span 2; /* Make it span two columns */
+    width: 140px;
+    border-radius: 40px; /* Pill shape */
+    justify-content: flex-start;
+    padding-left: 24px;
+}
